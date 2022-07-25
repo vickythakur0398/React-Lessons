@@ -1,4 +1,4 @@
-
+import ExpenseItem from "./components/ExpenseItem";
 function App() {
   return (
     // <div className="App">
@@ -23,6 +23,10 @@ function App() {
     <div>
     <h2>lets get started</h2>
     <p>this is updating Tada</p>
+
+    // SO HERE WE have used it just like html tags and than it will reflect on webpage
+    // this will tell react that we want this component to run as it alrerady imported at line 1
+    <ExpenseItem></ExpenseItem>
     </div>
   );
 }
