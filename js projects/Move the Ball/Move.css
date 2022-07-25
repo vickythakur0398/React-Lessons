@@ -1,0 +1,51 @@
+/* #Box{
+    height: 98vh;
+    width: 98vw;
+    border: 2px;
+    border-style: double;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#circle{
+    height: 25vh;
+    width: 200px;
+    background-color: red;
+    align-content: center;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    /* position: absolute; */
+    
+
+} */
+
+
+ #ball {
+   
+    width: 15vw;
+    height: 15vh;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+
+}
+
+
+/* #ball {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}  */
+
+
+
+
