@@ -3,7 +3,8 @@
 // </ExpenseItem> so page will know it is not html tags as it is not starting with small case
 
 //2 now i am importing css style sheet which i have copied
-
+// 49 using state to update value
+import React, {useState} from 'react';
 import Card from "../UI/Card";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
@@ -65,10 +66,14 @@ function ExpenseItem(props) {
   const day = props.date.toLocaleString('en-US', {day: '2-digit'})
   const year = props.date.getFullYear();
 */}
-    let title = props.title;
+    // let title = props.title;
+    // state returns the value in array so by destructing i am capturing it 
+    const [title, setTitle] = useState(props.title);
     const clickHandler = () =>
     {
-      title = 'updated';
+      // using useState to update
+      // title = 'updated';
+      setTitle('Updated')
       console.log(title)
     }
   return (
