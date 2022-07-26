@@ -65,9 +65,11 @@ function ExpenseItem(props) {
   const day = props.date.toLocaleString('en-US', {day: '2-digit'})
   const year = props.date.getFullYear();
 */}
+    let title = props.title;
     const clickHandler = () =>
     {
-      console.log("clicked!!!")
+      title = 'updated';
+      console.log(title)
     }
   return (
     <Card className="expense-item">
@@ -80,11 +82,11 @@ function ExpenseItem(props) {
   */}
       <ExpenseDate date={props.date}></ExpenseDate>
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
       </div>
       <div className="expense-item__price">{props.amount}</div>
       {/*47 here we are adding button */}
-      <button onClick= {clickHandler}>change this</button>
+      <button onClick= {clickHandler}>update title</button>
     
     </Card>
   );
