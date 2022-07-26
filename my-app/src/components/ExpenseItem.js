@@ -4,6 +4,7 @@
 
 //2 now i am importing css style sheet which i have copied
 
+import Card from "./Card";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 {
@@ -66,7 +67,7 @@ function ExpenseItem(props) {
 */
   }
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       {/* <div>{props.date.toISOString()} </div> setting date in a good presentable way 38*/}
       {/* 39 <div>
       <div>{month}</div>
@@ -79,7 +80,7 @@ function ExpenseItem(props) {
         <h2>{props.title}</h2>
       </div>
       <div className="expense-item__price">{props.amount}</div>
-    </div>
+    </Card>
   );
 }
 export default ExpenseItem;
