@@ -1,3 +1,4 @@
+import Expenses from "./components/Expenses";
 import ExpenseItem from "./components/ExpenseItem";
 function App() {
   //  37 here i am making a list of items which can be used dynamically using props
@@ -50,7 +51,7 @@ function App() {
       /*this will tell react that we want this component to run as it alrerady imported at line 1 */}
 
       {/*37 extracting values dynamically using above created expenses at 37*/}
-      <ExpenseItem
+      {/* <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
         date={expenses[0].date}
@@ -65,8 +66,14 @@ function App() {
         amount={expenses[2].amount}
         date={expenses[2].date}
       ></ExpenseItem>
+  */}
+    
+    <Expenses items={expenses} ></Expenses>
     </div>
   );
 }
 
 export default App;
+
+
+
