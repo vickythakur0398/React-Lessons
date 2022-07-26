@@ -1,5 +1,5 @@
-import Expenses from "./components/Expenses";
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
+// import ExpenseItem from "./components/ExpenseItem";
 function App() {
   //  37 here i am making a list of items which can be used dynamically using props
   const expenses = [
@@ -24,21 +24,7 @@ function App() {
   ];
 
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //     <div>
+   
     //     <h2>lets get started</h2></div>
     //   </header>
     // </div>
@@ -67,13 +53,10 @@ function App() {
         date={expenses[2].date}
       ></ExpenseItem>
   */}
-    
-    <Expenses items={expenses} ></Expenses>
+
+      <Expenses items={expenses}></Expenses>
     </div>
   );
 }
 
 export default App;
-
-
-

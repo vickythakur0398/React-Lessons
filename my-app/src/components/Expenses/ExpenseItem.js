@@ -4,7 +4,7 @@
 
 //2 now i am importing css style sheet which i have copied
 
-import Card from "./Card";
+import Card from "../UI/Card";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 {
@@ -64,8 +64,11 @@ function ExpenseItem(props) {
   const month = props.date.toLocaleString('en-US', {month: 'long'})
   const day = props.date.toLocaleString('en-US', {day: '2-digit'})
   const year = props.date.getFullYear();
-*/
-  }
+*/}
+    const clickHandler = () =>
+    {
+      console.log("clicked!!!")
+    }
   return (
     <Card className="expense-item">
       {/* <div>{props.date.toISOString()} </div> setting date in a good presentable way 38*/}
@@ -80,6 +83,9 @@ function ExpenseItem(props) {
         <h2>{props.title}</h2>
       </div>
       <div className="expense-item__price">{props.amount}</div>
+      {/*47 here we are adding button */}
+      <button onClick= {clickHandler}>change this</button>
+    
     </Card>
   );
 }
