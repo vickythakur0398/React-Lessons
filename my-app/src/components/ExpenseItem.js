@@ -4,6 +4,7 @@
 
 //2 now i am importing css style sheet which i have copied
 
+import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 {
   /*function ExpenseItem() {
@@ -55,17 +56,25 @@ import "./ExpenseItem.css";
 // here 37- I am using props
 
 function ExpenseItem(props) {
+  {
+    /*
+  39 what i am doin now is that I am creating a =nother date component which will do the same thing so i am 
+  so i am commenting that date div
   const month = props.date.toLocaleString('en-US', {month: 'long'})
   const day = props.date.toLocaleString('en-US', {day: '2-digit'})
   const year = props.date.getFullYear();
+*/
+  }
   return (
     <div className="expense-item">
       {/* <div>{props.date.toISOString()} </div> setting date in a good presentable way 38*/}
-      <div>
+      {/* 39 <div>
       <div>{month}</div>
       <div>{year}</div>
       <div>{day}</div>
       </div>
+  */}
+      <ExpenseDate date={props.date}></ExpenseDate>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
       </div>
