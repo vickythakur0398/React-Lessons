@@ -25,13 +25,19 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expense) =>
+  {
+        console.log('in app.js');
+        console.log(expenses);
+  }
+
   return (
     //     <h2>lets get started</h2></div>
     //   </header>
     // </div>
 
     <div>
-      <NewExpense></NewExpense>
+      
 
       {/* SO HERE WE have used it just like html tags and than it will reflect on webpage*/
       /*this will tell react that we want this component to run as it alrerady imported at line 1 */}
@@ -53,7 +59,7 @@ function App() {
         date={expenses[2].date}
       ></ExpenseItem>
   */}
-
+      <NewExpense onAddExpense = {addExpenseHandler}/>
       <Expenses items={expenses}></Expenses>
     </div>
   );

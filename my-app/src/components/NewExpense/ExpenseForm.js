@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -32,7 +32,7 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
+    props.onSaveExpenseData(expenseData);
     // 58 0nce the form is submitted we are setting it back to empty string we are using two way binding
     setEnteredTitle("");
     setEnteredAmount("");
@@ -45,8 +45,8 @@ const ExpenseForm = () => {
         <div className="new-expense__control">
           <label>Title</label>
           <input
-            type="text" value={enteredTitle}
-          
+            type="text"
+            value={enteredTitle}
             onChange={eventHandler}
           ></input>
         </div>
