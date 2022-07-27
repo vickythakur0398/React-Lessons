@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 // import ExpenseItem from "./components/ExpenseItem";
 function App() {
   //  37 here i am making a list of items which can be used dynamically using props
@@ -24,14 +25,12 @@ function App() {
   ];
 
   return (
-   
     //     <h2>lets get started</h2></div>
     //   </header>
     // </div>
 
     <div>
-      <h2>lets get started</h2>
-      <p>this is updating Tada</p>
+      <NewExpense></NewExpense>
 
       {/* SO HERE WE have used it just like html tags and than it will reflect on webpage*/
       /*this will tell react that we want this component to run as it alrerady imported at line 1 */}
