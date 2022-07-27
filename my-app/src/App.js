@@ -1,6 +1,7 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 // import ExpenseItem from "./components/ExpenseItem";
+
 function App() {
   //  37 here i am making a list of items which can be used dynamically using props
   const expenses = [
