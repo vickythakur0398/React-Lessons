@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 import "./ExpenseForm.css";
 
@@ -6,12 +6,13 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-  const eventHandler = (event) => {
-    setEnteredTitle(event.target.value);
+  
 
-    // console.log(event) it contains the all the events and isnide target > value it is capturing the value
-    // let val = event.target.value;
+  const titleChangeHandler = (event) => {
+    setEnteredTitle(event.target.value);
+    
   };
+
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
@@ -47,7 +48,7 @@ const ExpenseForm = (props) => {
           <input
             type="text"
             value={enteredTitle}
-            onChange={eventHandler}
+            onChange={titleChangeHandler }
           ></input>
         </div>
         <div className="new-expense__control">
