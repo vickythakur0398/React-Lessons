@@ -18,6 +18,7 @@ function ExpenseItem(props)
       //console.log(title)
     }
   return (
+    <li>
     <Card className="expense-item">
      
       <ExpenseDate date={props.date}></ExpenseDate>
@@ -29,6 +30,7 @@ function ExpenseItem(props)
       <button onClick= {clickHandler}>update title</button>*/}
     
     </Card>
+    </li>
   );
 }
 export default ExpenseItem;
