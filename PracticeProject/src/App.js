@@ -11,7 +11,7 @@ const addUserHandler = (uName, UAge) =>
 {
     setUsersList((prevUsersListState)=>
     {
-        return [...prevUsersListState, {name: uName, age: UAge}];
+        return [...prevUsersListState, {name: uName, age: UAge , id : Math.random().toString()}];
     });
 }
   return (
