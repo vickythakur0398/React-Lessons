@@ -1,7 +1,8 @@
-import styles from './AvailableMeals.module.css'
+import styles from "./AvailableMeals.module.css";
 
-import Card from '../UI/Card';
+import Card from "../UI/Card";
 
+import MealItem from "./MealItem/MealItem";
 
 const DUMMY_MEALS = [
   {
@@ -31,25 +32,30 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-    const mealsList = DUMMY_MEALS.map(meal => <li>{meal.name}</li>);
+  const mealsList = DUMMY_MEALS.map((meal) => (
+    <MealItem
+      key={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+    />
+  ));
   return (
-    
     <section className={styles.meals}>
-    {/*We want to use that dummy list which we have created  in most of the ream life
+      {/*We want to use that dummy list which we have created  in most of the ream life
 pages that data should be coming from web browser but here we are using
 hard coded array
 second task is to get this list so to do this we will use map() which goes into
 each array object and return whatever bu using a funcn inside map*/}
 
-{/*I am storing that in a const we can use it directly also and in function
+      {/*I am storing that in a const we can use it directly also and in function
 i am simple getting meals name as of now before return*/}
-<Card>
-      <ul>
-      {mealsList}
-      </ul>
+      <Card>
+        <ul>
+         {mealsList}
+        </ul>
       </Card>
     </section>
-  
   );
 };
 
