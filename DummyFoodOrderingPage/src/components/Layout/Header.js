@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import styles from "./Header.module.css";
 
+import HeaderCartButton from './HeaderCartButton'
+
 import FirstImage from '../../assets/FirstImage.jpg'
 
 /*This is the header section of the page whiich contains name and cart 
@@ -11,8 +13,11 @@ const Header = (props) => {
   <Fragment >
   <header className= {styles.header}>
   
+ 
   <h1>React Food Delivery</h1>
- <button>Cart</button>
+  <HeaderCartButton></HeaderCartButton>
+  
+    
   
   </header>
  {/*here i am using [] while using css bcs it has - so we cant use .*/}
