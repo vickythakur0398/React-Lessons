@@ -1,5 +1,7 @@
 import styles from './AvailableMeals.module.css'
 
+import Card from '../UI/Card';
+
 
 const DUMMY_MEALS = [
   {
@@ -31,6 +33,7 @@ const DUMMY_MEALS = [
 const AvailableMeals = () => {
     const mealsList = DUMMY_MEALS.map(meal => <li>{meal.name}</li>);
   return (
+    
     <section className={styles.meals}>
     {/*We want to use that dummy list which we have created  in most of the ream life
 pages that data should be coming from web browser but here we are using
@@ -40,10 +43,13 @@ each array object and return whatever bu using a funcn inside map*/}
 
 {/*I am storing that in a const we can use it directly also and in function
 i am simple getting meals name as of now before return*/}
+<Card>
       <ul>
       {mealsList}
       </ul>
+      </Card>
     </section>
+  
   );
 };
 
