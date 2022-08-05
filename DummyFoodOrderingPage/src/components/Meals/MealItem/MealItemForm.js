@@ -25,7 +25,7 @@ Input componnet so we can send all these objects to it thats what we
 are doing, these are all id type etc are default prop which we can add to any
 input element */}
 <Input label ="Amount"   input={{
-        id : 'Amount',
+        id : `amount_`+props.id,
         type: 'number',
         min: '1',
         max: '5',
