@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 
 import DUMMY_MEALS from "../Meals";
 import Card from "../../UI/Card";
+import MealItemForm from "./MealItemForm";
 
 /*
 
@@ -40,7 +41,7 @@ const MealItem = (props) => {
       {/*here user can enter 
     amount for which i am making form whic is another component*/}
     <div>
-    <button>hi</button>
+   <MealItemForm></MealItemForm>
     </div>
 
     </li>
